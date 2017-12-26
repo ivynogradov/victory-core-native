@@ -21,25 +21,23 @@ const styles = StyleSheet.create({
   }
 });
 
-class Demo extends Component {
-  render() {
-    return (
-      <ScrollView contentContainerStyle={styles.container}>
-        <Svg height="300" width="300">
-          <VictoryLabel
-            x={150}
-            y={150}
-            text="Hello"
-            textAnchor="middle"
-            style={{
-              fontSize: 25,
-              fill: "black"
-            }}
-          />
-        </Svg>
-      </ScrollView>
-    );
-  }
-}
+const Demo = props => {
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      <Svg height="300" width="300">
+        <VictoryLabel
+          x={150}
+          y={150}
+          text="Hello"
+          textAnchor="middle"
+          style={{
+            fontSize: 25,
+            fill: "black"
+          }}
+        />
+      </Svg>
+    </ScrollView>
+  );
+};
 
 AppRegistry.registerComponent("Demo", () => Demo);
